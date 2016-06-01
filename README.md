@@ -10,7 +10,7 @@
   8. [Nesting](#nesting)
   9. [Javascript Hooks](#javascript-hooks)
   10. [Styling Elements](#styling-elements)
-  11. [Important!](#important!)
+  11. [!Important](#!important)
 
 
 ### Formatting
@@ -178,6 +178,6 @@ h3 {
 }
 ```
 
-### Important!
+### !Important
 
 * Due to the fact we are using external libraries like Material Design Lite, there is a possibility that important will need to be used from time to time but please avoid it if you can.
