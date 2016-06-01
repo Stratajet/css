@@ -8,8 +8,9 @@
   6. [Floats and Flexbox](#floats-and-flexbox)
   7. [Breakpoints](#breakpoints)
   8. [Nesting](#nesting)
-  9. [Styling Elements](#styling-elements)
-  10. [Important!](#important!)
+  9. [Javascript Hooks](#javascript-hooks)
+  10. [Styling Elements](#styling-elements)
+  11. [Important!](#important!)
 
 
 ### Formatting
@@ -148,3 +149,35 @@
 }
 ```
 
+### Javascript Hooks
+* Where possible javascript hooks should be prefixed with `js-`. They should not be referenced in the css or scss file but should only used for js.
+
+```html
+<button class="c-btn-primary js-request-to-book">
+  Request to Book
+</button>
+```
+
+### Styling Elements
+* Always style a class and if you must, an id. For the purpose of javascript libraries that are difficult to customise you are welcome to style an element in a class, but never an element on it's own.
+
+
+**Bad**
+```css
+h3 {
+  font-size: 1.2em;
+  color: $white;
+}
+```
+
+**Good**
+```css
+.c-heading-3 {
+  font-size: 1.2em;
+  color: $white;
+}
+```
+
+### Important!
+
+* Due to the fact we are using external libraries like Material Design Lite, there is a possibility that important will need to be used from time to time but please avoid it if you can.
