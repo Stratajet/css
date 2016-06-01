@@ -9,7 +9,8 @@
   7. [Breakpoints](#breakpoints)
   8. [Nesting](#nesting)
   9. [Styling Elements](#styling-elements)
-  10.[Important!](#important!)
+  10. [Important!](#important!)
+
 
 ### Formatting
 
