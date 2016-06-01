@@ -2,6 +2,14 @@
 
   1. [Formatting](#formatting)
   2. [Commenting](#commenting)
+  3. [ID Selectors](#id-selectors)
+  4. [Class Names](#class-names)
+  5. [PX EMS and REMS](#px-ems-rems)
+  6. [Floats and Flexbox](#floats-and-flexbox)
+  7. [Breakpoints](#breakpoints)
+  8. [Nesting](#nesting)
+  9. [Styling Elements](#styling-elements)
+  10.[Important!](#important!)
 
 ### Formatting
 
