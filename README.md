@@ -1,4 +1,4 @@
-# Stratajet CSS / Sass Styleguide
+# Stratajet CSS / Scss Styleguide
 
   1. [Formatting](#formatting)
   2. [Commenting](#commenting)
