@@ -1,21 +1,7 @@
 # Stratajet CSS / Sass Styleguide
 
-  1. [Terminology](#terminology)
-    - [Rule Declaration](#rule-declaration)
-    - [Selectors](#selectors)
-    - [Properties](#properties)
-  1. [CSS](#css)
-    - [Formatting](#formatting)
-    - [Comments](#comments)
-    - [OOCSS and BEM](#oocss-and-bem)
-    - [ID Selectors](#id-selectors)
-    - [JavaScript hooks](#javascript-hooks)
-  1. [Sass](#sass)
-    - [Syntax](#syntax)
-    - [Ordering](#ordering-of-property-declarations)
-    - [Mixins](#mixins)
-    - [Placeholders](#placeholders)
-    - [Nested selectors](#nested-selectors)
+  1. [Formatting](#formatting)
+  2. [Commenting](#commenting)
 
 ### Formatting
 
