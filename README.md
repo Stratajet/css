@@ -174,7 +174,7 @@ h3 {
 
 ### Important
 
-* Due to the fact we are using external libraries like Material Design Lite, there is a possibility that `!importanta will need to be used from time to time but please avoid it if you can.
+* Due to the fact we are using external libraries like Material Design Lite, there is a possibility that `!important` will need to be used from time to time but please avoid it if you can.
 
 ### Namespacing
 
@@ -189,3 +189,10 @@ If an element requires a class for javascript functionality it should be preface
 
 **Utility Classes `atomic class names`**
 All smaller tweaks to elements should be added with atomic classes. Please don't have too many atomic classes per element ie more than ten. If you find yourself with that number of classes please make a layout tweak class.
+
+
+```html
+<div class="st-dropdown-select c(white) pos(r) mt(1em)">
+  ...
+</div>
+```
