@@ -1,4 +1,4 @@
-# Stratajet CSS / Scss Styleguide
+# Stratajet CSS / SCSS Styleguide
 
   1. [Formatting](#formatting)
   2. [Commenting](#commenting)
@@ -11,6 +11,7 @@
   9. [Javascript Hooks](#javascript-hooks)
   10. [Styling Elements](#styling-elements)
   11. [!Important](#!important)
+  12. [Namespacing](#namespacing)
 
 
 ### Formatting
@@ -23,35 +24,28 @@
 
 **Good**
 ```css
-.c-avatar {
+.st-avatar {
   border-radius: 50%;
   border: 2px solid white;
 }
  
-.c-one,
-.c-selector,
-.c-per-line {
+.st-one,
+.st-selector,
+.st-per-line {
   // ...
 }
 ```
 
 **Bad**
 ```css
-.c-avatar{
+.st-avatar{
     border-radius:50%;
     border:2px solid white; }
-.c-one, .c-selector, .c-per-line {
+.st-one, .st-selector, .st-per-line {
     // ...
 }
 ```
 
-*Large blocks of single declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace.
-
-```css
-.selector-1 { width: 10%; }
-.selector-2 { width: 20%; }
-.selector-3 { width: 30%; }
-```
 
 ### Commenting
 
@@ -60,9 +54,9 @@
 * Sections should be separated with block comments in all caps, beginning with a `#`
 
 ```css
-/*------------------------------------*\
-    #SECTION TITLE
-\*------------------------------------*/
+//------------------------------------
+//  #SECTION TITLE
+//------------------------------------
  
 .bd\(n\) {
   border: none;
@@ -83,7 +77,7 @@
 **Good**
 
 ```css
-.c-btn--primary {
+.st-btn--primary {
   background-color: blue;
   padding: 1em;
   color: white;
@@ -93,7 +87,7 @@
 **Bad**
 
 ```css
-.cBtnPrimary {
+.stBtnPrimary {
   background-color: blue;
   padding: 1em;
   color: white;
@@ -140,9 +134,9 @@
 * Do not nest more than 3 levels deep. This way css doesn't become too specific making it easier to use on other parts of the site.
 
 ```css
-.m-page-container {
-  .o-content {
-    .c-profile {
+.lt-page-container {
+  .lt-content {
+    .lt-profile {
       // STOP!
     }
   }
@@ -153,13 +147,13 @@
 * Where possible javascript hooks should be prefixed with `js-`. They should not be referenced in the css or scss file but should only used for js.
 
 ```html
-<button class="c-btn-primary js-request-to-book">
+<button class="st-btn-primary js-request-to-book">
   Request to Book
 </button>
 ```
 
 ### Styling Elements
-* Always style a class and if you must, an id. For the purpose of javascript libraries that are difficult to customise you are welcome to style an element in a class, but never an element on it's own.
+* Always style a class and if you must, an id. For the purpose of javascript libraries that are difficult to customise you are welcome to style an element in a class, but never an element on it's own outside the `_base.scss` file.
 
 
 **Bad**
@@ -172,7 +166,7 @@ h3 {
 
 **Good**
 ```css
-.c-heading-3 {
+.st-heading-3 {
   font-size: 1.2em;
   color: $white;
 }
@@ -181,3 +175,17 @@ h3 {
 ### !Important
 
 * Due to the fact we are using external libraries like Material Design Lite, there is a possibility that important will need to be used from time to time but please avoid it if you can.
+
+### Namespacing
+
+* Custom Components `st-`
+All custom basic components should be prefaced with st- which stands for Stratajet. An element with an st- prefix implies that ancillary classes can be removed and the element will be able to look as good as it does in the style guide. There should only be one st- class per element.
+
+* Layout tweaks `lt-`
+All tweaks to components or layout should start with lt-. I would advise against having more that one lt- class. Please try to use atomic classes for variations instead of adding another lt- class.
+
+* Javascript hooks `js-`
+If an element requires a class for javascript functionality it should be prefaced with js-. Please note these classes should not be styled.
+
+* Utility Classes `atomic class names`
+All smaller tweaks to elements should be added with atomic classes. Please don't have too many atomic classes per element ie more than ten. If you find yourself with that number of classes please make a layout tweak class.
