@@ -10,7 +10,7 @@
   8. [Nesting](#nesting)
   9. [Javascript Hooks](#javascript-hooks)
   10. [Styling Elements](#styling-elements)
-  11. [!Important](#!important)
+  11. [Important](#important)
   12. [Namespacing](#namespacing)
 
 
@@ -172,20 +172,20 @@ h3 {
 }
 ```
 
-### !Important
+### Important
 
-* Due to the fact we are using external libraries like Material Design Lite, there is a possibility that important will need to be used from time to time but please avoid it if you can.
+* Due to the fact we are using external libraries like Material Design Lite, there is a possibility that `!importanta will need to be used from time to time but please avoid it if you can.
 
 ### Namespacing
 
-* Custom Components `st-`
+**Custom Components `st-`**
 All custom basic components should be prefaced with st- which stands for Stratajet. An element with an st- prefix implies that ancillary classes can be removed and the element will be able to look as good as it does in the style guide. There should only be one st- class per element.
 
-* Layout tweaks `lt-`
+**Layout tweaks `lt-`**
 All tweaks to components or layout should start with lt-. I would advise against having more that one lt- class. Please try to use atomic classes for variations instead of adding another lt- class.
 
-* Javascript hooks `js-`
+**Javascript hooks `js-`**
 If an element requires a class for javascript functionality it should be prefaced with js-. Please note these classes should not be styled.
 
-* Utility Classes `atomic class names`
+**Utility Classes `atomic class names`**
 All smaller tweaks to elements should be added with atomic classes. Please don't have too many atomic classes per element ie more than ten. If you find yourself with that number of classes please make a layout tweak class.
